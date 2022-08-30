@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+sidebar_label: Why Contribute
+title: Why Contribute
 ---
 
 ## Why to contribute?
