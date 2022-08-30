@@ -100,3 +100,37 @@ Within Weaviate, all individual data objects are based on a class property struc
 You can add data to Weaviate through the [RESTful API](https://weaviate.io/developers/weaviate/current/restful-api-references/) end-points and retrieve data through the [GraphQL interface](https://weaviate.io/developers/weaviate/current/graphql-references/).
 
 Weaviates [vector indexing mechanism is modular](https://weaviate.io/developers/weaviate/current/vector-index-plugins/), and the current available plugin is the [Hierarchical Navigable Small World (HNSW) multilayered graph](https://weaviate.io/developers/weaviate/current/vector-index-plugins/hnsw.html).
+
+## What are Weaviate modules?
+
+Weaviate modules are used to extend Weaviate’s capabilities and optional. There are Weaviate modules that automatically vectorize your content (i.e., `*2vec`) or extend Weaviate’s capabilities (often related to the type of vectors you have.) You can also create your own modules. Click [here](https://weaviate.io/developers/weaviate/current/modules) to get started with them.
+
+## What is a vector search engine?
+
+If you work with data, you probably work with search engine technology. The best search engines are amazing pieces of software, but because of their core architecture, they come with limitations when it comes to finding the data you are looking for.
+
+Take for example the data object: `{ "data": "The Eiffel Tower is a wrought iron lattice tower on the Champ de Mars in Paris." }`
+
+Storing this in a traditional search engine might leverage inverted indices to index the data. This means that to retrieve the data; you need to search for “Eiffel Tower” or “wrought iron lattice”, etc. to find it. But what if you have vast amounts of data and you want the document about the Eiffel Tower but you search for: “landmarks in France”? Traditional search engines can’t help you there and this is where vector search engines show their superiority.
+
+Weaviate uses vector indexing mechanisms at its core to represent the data. The vectorization modules (e.g., the NLP module) vectorizes the above-mentioned data object in a vector-space where the data object sits near the text ”landmarks in France”. This means that Weaviate can’t make a 100% match, but a very high one to show you the results.
+
+The above example is for text (i.e., NLP) but you can use it for any machine learning model that vectorizes, like images, audio, video, genes, etc.
+
+Last but not least, using a vector search engine for your machine learning is something you do for the same reason you’ve been using a traditional search engine. It allows you to scale fast, search, and classify in real-time and it can be used in a robust production environment.
+
+## When should I use Weaviate?
+
+There are five main situations when you should consider using Weaviate: 
+
+* **If you don’t like the quality of results that your current search engine gives you.** (With Weaviate you can search through your data semantically.)
+
+* **If you want to do textual and image similarity search with out-of-the-box state-of-the-art ML models.** (Combine storing and querying of multiple media types in one Weaviate instance.)
+
+* **If you want to combine semantic (vector) and scalar search with a vector database taking milliseconds.** (Weaviate stores both your objects and vectors and makes sure the retrieval of both is always efficient)
+
+* **If you need to scale your own machine learning models to production size.** (HNSW algorithm and horizontally scalable support near-realtime database operations)
+
+* **If you need to classify large datasets fast and near-realtime.** (kNN, zero-shot or contextual classification with out-of-the-box or custom ML models)
+
+People use Weaviate for cases such as semantic search, image search, similarity search, anomaly detection, power recommendation engines, e-commerce search, data classification in ERP systems, automated data harmonization, cybersecurity threat analysis, and many, many more cases.
