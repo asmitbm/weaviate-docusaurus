@@ -4,32 +4,31 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Query your data using GraphQL',
+    Svg: require('@site/static/img/graphql.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Weaviate has a graph-like data model to easily search through your data using the GraphQL-API. 
+        Making Weaviate ideal to store any vectorized data format or graph-embeddings.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Containerized development',
+    Svg: require('@site/static/img/docker.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Starting your development with Weaviate is one <code>docker-compose up</code> away. 
+        Get started in the docs <a href="/docs/intro">here</a>.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Kubernetes for scale',
+    Svg: require('@site/static/img/kubernetes.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Need to scale for production? Check out the Weaviate K8s docs <a href="https://weaviate.io/developers/weaviate/current/getting-started/installation.html#kubernetes" target="_blank">here</a>.
       </>
     ),
   },
@@ -53,6 +52,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <h1>Combining developer UX and scalability</h1>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
