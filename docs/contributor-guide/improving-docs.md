@@ -215,7 +215,7 @@ The assign tag is used to create a new variable. It is written in the following 
   {% assign sortedResources = site.data.podcasts | sort: 'date' %}
 ```  
 
-::: info
+:::info
 
 Also read repository specific [CONTRIBUTION.md](https://github.com/semi-technologies/weaviate-io/blob/main/CONTRIBUTING.md) to get more familiar with the code base and contribution style.
 
