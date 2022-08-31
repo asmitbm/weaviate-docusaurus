@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Weaviate Docs',
   tagline: 'Vector Search Engine',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://weaviate-docusaurus.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
