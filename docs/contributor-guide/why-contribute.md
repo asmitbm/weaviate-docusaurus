@@ -19,7 +19,7 @@ There are numerous exciting ways to contribute to the Weaviate core. The list be
 
 * [Suggesting Enhancements](./suggesting-enhancements)
 * [Reporting Bugs](./reporting-bugs)
-* [Improving Documentation](Improving-docs.md)
+* [Improving Documentation](./improving-docs)
 * [Writing blog posts](Writing-blogs.md)
 * [Creating tutorials](Creating-tutorials.md)
 
