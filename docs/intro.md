@@ -1,12 +1,13 @@
 ---
+id: intro
 sidebar_position: 1
+sidebar_label: Weaviate
+title: Weaviate
 ---
-
-import Badges from '@site/src/components/badges'
 
 # Weaviate
 
-<Badges></Badges>
+<badges></badges>
 
 Welcome to the Weaviate documentation. Here you will find what Weaviate is all about, how to create your Weaviate instance, interact with it, and use it to perform vector searches and classification.
 

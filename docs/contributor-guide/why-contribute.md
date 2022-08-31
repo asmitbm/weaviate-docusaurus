@@ -1,4 +1,5 @@
 ---
+id: why-contribute
 sidebar_position: 1
 sidebar_label: Why Contribute
 title: Why Contribute
@@ -17,7 +18,7 @@ There are numerous exciting ways to contribute to the Weaviate core. The list be
 *need to implement allcontributors bot in this stage (will reflect only in readme). This will essentially show all contributors. Also mention about joining org*
 *create separate pages for better navigation*
 
-* [Suggesting Enhancements](Suggesting-enhancements.md)
+* [Suggesting Enhancements](./suggesting-enhancements)
 * [Reporting Bugs](Reporting-bugs.md)
 * [Improving Documentation](Improving-docs.md)
 * [Writing blog posts](Writing-blogs.md)
