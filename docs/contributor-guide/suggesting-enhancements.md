@@ -174,7 +174,11 @@ tools/dev/restart_dev_environment.sh --transformers && ./tools/dev/run_dev_serve
 tools/dev/restart_dev_environment.sh --qna && ./tools/dev/run_dev_server.sh local-qna
 ```
 
+:::info
+
 The above commands are subject to change as we add more modules and require specific combinations for local testing. You can always inspect the two files to see which options are contained. The first option without any arguments is always guarateed to work.
+
+:::
 
 To make query search use this link for console: https://console.semi.technology/.
 
