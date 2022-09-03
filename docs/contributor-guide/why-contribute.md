@@ -23,4 +23,4 @@ There are numerous exciting ways to contribute to the Weaviate core. The list be
 * [Writing blog posts](./writing-blogs)
 * [Creating tutorials](./creating-tutorials)
 
-If you are not familiar with git and GitHub basics, we recommend you to check out the Contributing to Weaviate using git and GitHub guide.
+If you are not familiar with git and GitHub basics, we recommend you to check out the [Contributing to Weaviate using git and GitHub guide](./git-and-github).
