@@ -97,7 +97,7 @@ To setup and install our documentation site on your local machine, follow the st
 
 ## Setting up the repository
 
-If you're new to git and GitHub, check out the beginners guide to [git and GitHub].
+If you're new to git and GitHub, check out the beginners guide to [git and GitHub](./git-and-github).
   
 To get the site up and running locally, follow the below steps:
 
