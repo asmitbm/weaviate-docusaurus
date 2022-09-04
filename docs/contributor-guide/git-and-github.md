@@ -231,7 +231,7 @@ Here are some general guidelines about how to submit a pull request:
 
 * Do not commit changes to files that are irrelevant to your feature or bug fix
 
-* Write a good commit message. Check out [commit guidelines]
+* Write a good commit message. Check out [commit guidelines](./commit-guidelines)
 
 **Adding the files and commiting:**
 
@@ -251,7 +251,7 @@ You can also use `git add .` to stage all the files, but it is not recommended t
 git status
 ```
 
-* If everything is good to go, proceed with commiting your changes with a **good commit message**. More information on how to write good commit messages can be found on this [page].
+* If everything is good to go, proceed with commiting your changes with a **good commit message**. More information on how to write good commit messages can be found on this [page](./commit-guidelines).
 
 ```
 git commit -m "your commit message"
