@@ -39,7 +39,7 @@ For local development or personal evaluation, using Docker Compose will most lik
 
 ### Self-deployment instructions
 
-The installation and configuration with Docker and Kubernetes is out of scope for this tutorial. If you prefer to deploy Weaviate yourself, see the installation documentation page. Then you can continue with the tutorial with at Schema page.
+The installation and configuration with Docker and Kubernetes is out of scope for this tutorial. If you prefer to deploy Weaviate yourself, see the [installation documentation](https://weaviate.io/developers/weaviate/current/installation/) page. Then you can continue with the tutorial with at Schema page.
 
 ## WCS hands-on
 
@@ -61,7 +61,7 @@ If you don’t have an account with WCS yet, click the [“Don’t have an accou
 
 To create a new Weaviate Cluster:
 
-* Press the “Create a Weaviate Cluster” button
+* Press the `Create a Weaviate Cluster` button
 * Configure the cluster:
     * Set the `name` for your cluster – note: The name will become part of the URL we will use to access this instance. Please use a different name than “getting-started”.
     * Leave the `Subscription Tier` as `Sandbox` - note: The sandbox is free, but it will expire after 5 days
