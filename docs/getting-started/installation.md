@@ -46,7 +46,7 @@ The installation and configuration with Docker and Kubernetes is out of scope fo
 To create a new Weaviate instance on the Weaviate Cloud Service, we need to follow these steps:
 
 * [**Sign in to WCS**](#sign-in-to-wcs)
-* Create a Weaviate Cluster
+* [**Create a Weaviate Cluster**](#create-a-weaviate-cluster)
 * Test the connection
 
 ### Sign in to WCS
@@ -56,3 +56,15 @@ In order to access WCS, navigate to the [Weaviate Cloud Console](https://console
 No account, no problem
 
 If you don’t have an account with WCS yet, click the [“Don’t have an account? Sign Up”](https://auth.wcs.api.semi.technology/auth/realms/SeMI/protocol/openid-connect/registrations?client_id=wcs&response_type=code&redirect_uri=https://console.semi.technology/console/wcs) link and create an account.
+
+### Create a Weaviate Cluster
+
+To create a new Weaviate Cluster:
+
+* Press the “Create a Weaviate Cluster” button
+* Configure the cluster:
+    * Set the `name` for your cluster – note: The name will become part of the URL we will use to access this instance. Please use a different name than “getting-started”.
+    * Leave the `Subscription Tier` as `Sandbox` - note: The sandbox is free, but it will expire after 5 days
+    * Leave the `Weaviate Version` as the latest
+    * Leave the `Standalone Or Modules` as `Standalone, no Modules`
+    * **Change** the `OIDC Authentication` to `Disabled`
