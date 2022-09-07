@@ -17,7 +17,7 @@ There are three ways you can run Weaviate, and they are -we believe- pretty stra
 
 The fastest way 🚀 to create a new Weaviate instance – from scratch – is to use the Weaviate Cloud Service (aka, the WCS). The WCS is a completely managed service, so you don’t have to install or maintain anything to run Weaviate. Currently, the service is in private beta, but (🤫) if you log in to the [Weaviate Cloud Console](https://console.semi.technology/), you can create a free sandbox to play around with.
 
-If you are itching to get started with WCS, just skip to the [WCS hands-on section].
+If you are itching to get started with WCS, just skip to the [WCS hands-on section](#wcs-hands-on).
 
 ## Running Weaviate yourself
 
@@ -38,6 +38,7 @@ Generally, we recommend using Kubernetes to deploy Weaviate for any long-running
 For local development or personal evaluation, using Docker Compose will most likely be sufficient.
 
 ### Self-deployment instructions
+
 The installation and configuration with Docker and Kubernetes is out of scope for this tutorial. If you prefer to deploy Weaviate yourself, see the installation documentation page. Then you can continue with the tutorial with at Schema page.
 
 ## WCS hands-on
