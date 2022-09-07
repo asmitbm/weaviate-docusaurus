@@ -47,7 +47,7 @@ To create a new Weaviate instance on the Weaviate Cloud Service, we need to foll
 
 * [**Sign in to WCS**](#sign-in-to-wcs)
 * [**Create a Weaviate Cluster**](#create-a-weaviate-cluster)
-* Test the connection
+* [Test the connection](#test-the-connection)
 
 ### Sign in to WCS
 
@@ -68,3 +68,21 @@ To create a new Weaviate Cluster:
     * Leave the `Weaviate Version` as the latest
     * Leave the `Standalone Or Modules` as `Standalone, no Modules`
     * **Change** the `OIDC Authentication` to `Disabled`
+
+![register](./img/register.jpg)
+
+* Finally, press **Create**.
+
+This will start the process to create a new cluster. The status indicator on the left will show the progress (in %); after a few minutes, you should see a green tick ✔️ - indicating that the cluster is ready.
+
+### Test the connection
+
+To test the connection, click on the Cluster Id link, which will open a new page in your browser and display all the available endpoints.
+
+![weaviate_cluster](./img/weaviate-cluster.jpg)
+
+:::note
+
+For every endpoint, there is a documentationHref link, which points us to relevant documentation pages.
+
+:::
