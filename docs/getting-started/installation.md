@@ -39,7 +39,23 @@ For local development or personal evaluation, using Docker Compose will most lik
 
 ### Self-deployment instructions
 
-The installation and configuration with Docker and Kubernetes is out of scope for this tutorial. If you prefer to deploy Weaviate yourself, see the [installation documentation](https://weaviate.io/developers/weaviate/current/installation/) page. Then you can continue with the tutorial with at Schema page.
+The installation and configuration with Docker and Kubernetes is out of scope for this tutorial. If you prefer to deploy Weaviate yourself, see the [installation documentation](https://weaviate.io/developers/weaviate/current/installation/) page. 
+
+If you feel comfortable making a few changes to the code examples in the tutorial and you prefer to run Weaviate locally. You can set up Weaviate with Docker in two steps:
+
+1. Get `docker-compose.yml` configuration file by calling:
+
+``` 
+curl -o docker-compose.yml "https://configuration.semi.technology/v2/docker-compose/docker-compose.yml?enterprise_usage_collector=false&modules=standalone&runtime=docker-compose&weaviate_version=v15.0.0"
+```
+
+2. Sping up docker
+
+```
+ docker-compose up -d
+```
+
+Then you can continue with the tutorial with at Schema page.
 
 ## WCS hands-on
 
@@ -47,7 +63,7 @@ To create a new Weaviate instance on the Weaviate Cloud Service, we need to foll
 
 * [**Sign in to WCS**](#sign-in-to-wcs)
 * [**Create a Weaviate Cluster**](#create-a-weaviate-cluster)
-* [Test the connection](#test-the-connection)
+* [**Test the connection**](#test-the-connection)
 
 ### Sign in to WCS
 
@@ -56,6 +72,8 @@ In order to access WCS, navigate to the [Weaviate Cloud Console](https://console
 No account, no problem
 
 If you don’t have an account with WCS yet, click the [“Don’t have an account? Sign Up”](https://auth.wcs.api.semi.technology/auth/realms/SeMI/protocol/openid-connect/registrations?client_id=wcs&response_type=code&redirect_uri=https://console.semi.technology/console/wcs) link and create an account.
+
+![register](./img/register.jpg)
 
 ### Create a Weaviate Cluster
 
@@ -69,7 +87,7 @@ To create a new Weaviate Cluster:
     * Leave the `Standalone Or Modules` as `Standalone, no Modules`
     * **Change** the `OIDC Authentication` to `Disabled`
 
-![register](./img/register.jpg)
+![cluster-configuration](./img/cluster-configuration.jpg)
 
 * Finally, press **Create**.
 
@@ -86,3 +104,25 @@ To test the connection, click on the Cluster Id link, which will open a new page
 For every endpoint, there is a documentationHref link, which points us to relevant documentation pages.
 
 :::
+
+Now, we are ready to start working with Weaviate. 🎉
+
+## Recapitulation
+
+* You can run Weaviate with Weaviate Cloud Service, Docker or Kubernetes.
+
+* Weaviate Cloud Service is a managed Weaviate SaaS - great for development and production.
+
+* Docker alows you to set up Weaviate on your machine or in the cloud – great for development and production.
+
+* Kubernetes is great for long-running Weaviate deployments.
+
+* You have a working instance of Weaviate in WCS.
+
+## Next Steps
+Next, learn about the [Weaviate Schema].
+
+Alternatively, you can:
+
+* [Skip to Querying in Weaviate]
+* [Go back to the basics](https://weaviate.io/developers/weaviate/current/core-knowledge/basics.html)
