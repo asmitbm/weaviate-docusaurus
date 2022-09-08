@@ -55,7 +55,7 @@ curl -o docker-compose.yml "https://configuration.semi.technology/v2/docker-comp
  docker-compose up -d
 ```
 
-Then you can continue with the tutorial with at Schema page.
+Then you can continue with the tutorial with at [Schema](./schema) page.
 
 ## WCS hands-on
 
@@ -120,7 +120,7 @@ Now, we are ready to start working with Weaviate. 🎉
 * You have a working instance of Weaviate in WCS.
 
 ## Next Steps
-Next, learn about the [Weaviate Schema].
+Next, learn about the [Weaviate Schema](./schema).
 
 Alternatively, you can:
 
