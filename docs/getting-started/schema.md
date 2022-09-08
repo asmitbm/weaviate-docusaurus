@@ -718,48 +718,20 @@ Run the below code in your application.
 import weaviate
 import json
 
-client = weaviate.Client("https://some-endpoint.semi.network/") # <== update the endpoint here!
+client = weaviate.Client("https://some-endpoint.semi.network/")
 
-# we will create the class "Author" and the properties
+# we will create the class "Publication" and the properties
 # from the basics section of this guide
 class_obj = {
-    "class": "Author", # <= note the capital "A".
-    "description": "A description of this class, in this case, it is about authors",
+    "class": "Publication",
+    "description": "A description of this class, in this case, it is about publications",
     "properties": [
         {
             "dataType": [
                 "string"
             ],
-            "description": "The name of the Author",
+            "description": "The name of the Publication",
             "name": "name",
-        },
-        {
-            "dataType": [
-                "int"
-            ],
-            "description": "The age of the Author",
-            "name": "age"
-        },
-        {
-            "dataType": [
-                "date"
-            ],
-            "description": "The date of birth of the Author",
-            "name": "born"
-        },
-        {
-            "dataType": [
-                "boolean"
-            ],
-            "description": "A boolean value if the Author won a nobel prize",
-            "name": "wonNobelPrize"
-        },
-        {
-            "dataType": [
-                "text"
-            ],
-            "description": "A description of the author",
-            "name": "description"
         }
     ]
 }
@@ -780,54 +752,27 @@ print(json.dumps(schema, indent=4))
 ```js
 const weaviate = require("weaviate-client");
 
-// update the endpoint here!
+// update the endpoint!
 const client = weaviate.client({
     scheme: 'https',
     host: 'some-endpoint.semi.network/',
   }); 
 
-// we will create the class "Author" and the properties
+// we will create the class "Publication" and the properties
 // from the basics section of this guide
+
 var classObj = {
-  "class": "Author", // <= note the capital "A".
-  "description": "A description of this class, in this case, it is about authors",
-  "properties": [
-      {
-          "dataType": [
-              "string"
-          ],
-          "description": "The name of the Author",
-          "name": "name",
-      },
-      {
-          "dataType": [
-              "int"
-          ],
-          "description": "The age of the Author",
-          "name": "age"
-      },
-      {
-          "dataType": [
-              "date"
-          ],
-          "description": "The date of birth of the Author",
-          "name": "born"
-      },
-      {
-          "dataType": [
-              "boolean"
-          ],
-          "description": "A boolean value if the Author won a nobel prize",
-          "name": "wonNobelPrize"
-      },
-      {
-          "dataType": [
-              "text"
-          ],
-          "description": "A description of the author",
-          "name": "description"
-      }
-  ]
+    "class": "Publication",
+    "description": "A description of this class, in this case, it is about publications",
+    "properties": [
+        {
+            "dataType": [
+                "string"
+            ],
+            "description": "The name of the Publication",
+            "name": "name",
+        }
+    ]
 }
 
 // add the schema
@@ -864,50 +809,30 @@ package main
 
 import (
 	"context"
-    "fmt"
-    "github.com/semi-technologies/weaviate-go-client/v4/weaviate"
-    "github.com/semi-technologies/weaviate/entities/models"
+	"fmt"
+	"github.com/semi-technologies/weaviate-go-client/v4/weaviate"
+  "github.com/semi-technologies/weaviate/entities/models"
+
 )
 
 func main() {
-    // update the endpoint here!
     cfg := weaviate.Config{
         Host:   "some-endpoint.semi.network/",
-		Scheme: "https",
+        Scheme: "https",
     }
 
     client := weaviate.New(cfg)
 
-    // we will create the class "Author" and the properties
+    // we will create the class "Publication" and the properties
     // from the basics section of this guide
     classObj := &models.Class{
-        Class:       "Author", // <= note the capital "A".
-        Description: "A description of this class, in this case, it is about authors",
+        Class:       "Publication", // <= note the capital "A".
+        Description: "A description of this class, in this case, it is about publications",
         Properties: []*models.Property{
             {
                 DataType:    []string{"string"},
-                Description: "The name of the Author",
+                Description: "The name of the Publication",
                 Name:        "name",
-            },
-            {
-                DataType:    []string{"int"},
-                Description: "The age of the Author",
-                Name:        "age",
-            },
-            {
-                DataType:    []string{"date"},
-                Description: "The date of birth of the Author",
-                Name:        "born",
-            },
-            {
-                DataType:    []string{"boolean"},
-                Description: "A boolean value if the Author won a nobel prize",
-                Name:        "wonNobelPrize",
-            },
-            {
-                DataType:    []string{"text"},
-                Description: "A description of the author",
-                Name:        "description",
             },
         },
     }
@@ -945,46 +870,20 @@ import technology.semi.weaviate.client.v1.schema.model.WeaviateClass;
 
 public class App {
   public static void main(String[] args) {
-    // if you use the WCS
     Config config = new Config("https", "some-endpoint.semi.network/");
-    
-    // or 
-
-    // if you use Docker-compose
-    Config config = new Config("http", "localhost:8080");
 
     WeaviateClient client = new WeaviateClient(config);
 
-    // we will create the class "Author" and the properties
+    // we will create the class "Publication" and the properties
     // from the basics section of this guide
     WeaviateClass clazz = WeaviateClass.builder()
-      .className("Author")
-      .description("A description of this class, in this case, it is about authors")
+      .className("Publication")
+      .description("A description of this class, in this case, it is about publications")
       .properties(new ArrayList() { {
         add(Property.builder()
           .dataType(new ArrayList(){ { add(DataType.STRING); } })
-          .description("The name of the Author")
+          .description("The name of the Publication")
           .name("name")
-          .build());
-        add(Property.builder()
-          .dataType(new ArrayList(){ { add(DataType.INT); } })
-          .description("The age of the Author")
-          .name("age")
-          .build());
-        add(Property.builder()
-          .dataType(new ArrayList(){ { add(DataType.DATE); } })
-          .description("The date of birth of the Author")
-          .name("born")
-          .build());
-        add(Property.builder()
-          .dataType(new ArrayList(){ { add(DataType.BOOLEAN); } })
-          .description("A boolean value if the Author won a nobel prize")
-          .name("wonNobelPrize")
-            .build());
-        add(Property.builder()
-          .dataType(new ArrayList(){ { add(DataType.TEXT); } })
-          .description("A description of the author")
-          .name("description")
           .build());
       } })
       .build();
@@ -995,8 +894,6 @@ public class App {
       System.out.println(result.getError());
       return;
     }
-    System.out.println(result.getResult());
-
     // get the schema
     Result<Schema> result = client.schema().getter().run();
     if (result.hasErrors()) {
@@ -1016,52 +913,165 @@ public class App {
 
 ```curl
 curl \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{
-        "class": "Author",
-        "description": "A description of this class, in this case, it is about authors",
-        "properties": [
-            {
-                "dataType": [
-                    "string"
-                ],
-                "description": "The name of the Author",
-                "name": "name"
-            },
-            {
-                "dataType": [
-                    "int"
-                ],
-                "description": "The age of the Author",
-                "name": "age"
-            },
-            {
-                "dataType": [
-                    "date"
-                ],
-                "description": "The date of birth of the Author",
-                "name": "born"
-            },
-            {
-                "dataType": [
-                    "boolean"
-                ],
-                "description": "A boolean value if the Author won a nobel prize",
-                "name": "wonNobelPrize"
-            },
-            {
-                "dataType": [
-                    "text"
-                ],
-                "description": "A description of the author",
-                "name": "description"
-            }
-        ]
-    }' \
-    # update the endpoint here!
-    https://some-endpoint.semi.network/v1/schema
+-X POST \
+-H "Content-Type: application/json" \
+-d '{
+    "class": "Publication",
+    "description": "A description of this class, in this case, it is about Publications",
+    "properties": [
+        {
+            "dataType": [
+                "string"
+            ],
+            "description": "The name of the Publication",
+            "name": "name"
+        }
+    ]
+}' \
+https://some-endpoint.semi.network/v1/schema
+    
+curl https://some-endpoint.semi.network/v1/schema
 ```
 
 </TabItem>
 </Tabs>
+
+The result should look something like this:
+
+```jsx
+{
+    "classes": [
+        {
+            "class": "Author",
+            "description": "A description of this class, in this case, it's about authors",
+            "invertedIndexConfig": {
+                "bm25": {
+                    "b": 0.75,
+                    "k1": 1.2
+                },
+                "cleanupIntervalSeconds": 60,
+                "stopwords": {
+                    "additions": null,
+                    "preset": "en",
+                    "removals": null
+                }
+            },
+            "properties": [
+                {
+                    "dataType": [
+                        "string"
+                    ],
+                    "description": "The name of the Author",
+                    "name": "name",
+                    "tokenization": "word"
+                },
+                {
+                    "dataType": [
+                        "int"
+                    ],
+                    "description": "The age of the Author",
+                    "name": "age"
+                },
+                {
+                    "dataType": [
+                        "date"
+                    ],
+                    "description": "The date of birth of the Author",
+                    "name": "born"
+                },
+                {
+                    "dataType": [
+                        "boolean"
+                    ],
+                    "description": "A boolean value if the Author won a nobel prize",
+                    "name": "wonNobelPrize"
+                },
+                {
+                    "dataType": [
+                        "text"
+                    ],
+                    "description": "A description of the author",
+                    "name": "description",
+                    "tokenization": "word"
+                }
+            ],
+            "shardingConfig": {
+                "virtualPerPhysical": 128,
+                "desiredCount": 1,
+                "actualCount": 1,
+                "desiredVirtualCount": 128,
+                "actualVirtualCount": 128,
+                "key": "_id",
+                "strategy": "hash",
+                "function": "murmur3"
+            },
+            "vectorIndexConfig": {
+                "skip": false,
+                "cleanupIntervalSeconds": 300,
+                "maxConnections": 64,
+                "efConstruction": 128,
+                "ef": -1,
+                "dynamicEfMin": 100,
+                "dynamicEfMax": 500,
+                "dynamicEfFactor": 8,
+                "vectorCacheMaxObjects": 2000000,
+                "flatSearchCutoff": 40000,
+                "distance": "cosine"
+            },
+            "vectorIndexType": "hnsw",
+            "vectorizer": "none"
+        },
+        {
+            "class": "Publication",
+            "description": "A description of this class, in this case, it's about authors",
+            "invertedIndexConfig": {
+                "bm25": {
+                    "b": 0.75,
+                    "k1": 1.2
+                },
+                "cleanupIntervalSeconds": 60,
+                "stopwords": {
+                    "additions": null,
+                    "preset": "en",
+                    "removals": null
+                }
+            },
+            "properties": [
+                {
+                    "dataType": [
+                        "string"
+                    ],
+                    "description": "The name of the Publication",
+                    "name": "name",
+                    "tokenization": "word"
+                }
+            ],
+            "shardingConfig": {
+                "virtualPerPhysical": 128,
+                "desiredCount": 1,
+                "actualCount": 1,
+                "desiredVirtualCount": 128,
+                "actualVirtualCount": 128,
+                "key": "_id",
+                "strategy": "hash",
+                "function": "murmur3"
+            },
+            "vectorIndexConfig": {
+                "skip": false,
+                "cleanupIntervalSeconds": 300,
+                "maxConnections": 64,
+                "efConstruction": 128,
+                "ef": -1,
+                "dynamicEfMin": 100,
+                "dynamicEfMax": 500,
+                "dynamicEfFactor": 8,
+                "vectorCacheMaxObjects": 2000000,
+                "flatSearchCutoff": 40000,
+                "distance": "cosine"
+            },
+            "vectorIndexType": "hnsw",
+            "vectorizer": "none"
+        }
+    ]
+}
+```
