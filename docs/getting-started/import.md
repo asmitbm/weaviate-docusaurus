@@ -692,3 +692,9 @@ All other CRUD object operations are available in the [objects RESTful API docum
 
 ## Recapitulation
 Importing into Weaviate needs some planning on your side. In almost all cases, you want to use the [batch endpoint](https://weaviate.io/developers/weaviate/current/restful-api-references/batch.html) to create data objects. More often than not, the bottleneck sits in the import script and not in Weaviate. Try to optimize for maxing out all CPUs to get the fastest import speeds.
+
+## What would you like to learn next?
+
+* [Learn how to query with the GraphQL-API](./query)
+* [Bring me back to working with the schema](./schema)
+* [Show me how modules work](./modules)
