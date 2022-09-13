@@ -577,3 +577,118 @@ You can quickly check the imported object by opening – `weaviate-endpoint/v1/o
 ```
 https://some-endpoint.semi.network/v1/objects
 ```
+
+Or you can read the objects in your project, like this:
+
+<Tabs groupId="languages">
+<TabItem value="py" label="Python">
+
+```py
+import weaviate
+import json
+
+client = weaviate.Client("https://some-endpoint.semi.network/")
+
+all_objects = client.data_object.get()
+print(json.dumps(all_objects))
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const weaviate = require("weaviate-client");
+
+const client = weaviate.client({
+    scheme: 'https',
+    host: 'some-endpoint.semi.network/',
+  }); 
+
+client
+    .data
+    .getter()
+    .do()
+    .then(res => {
+        console.log(res)
+    })
+    .catch(err => {
+        console.error(err)
+    });
+```
+
+</TabItem>
+<TabItem value="go" label="Go">
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"github.com/semi-technologies/weaviate-go-client/v4/weaviate"
+)
+
+func GetSchema() {
+    cfg := weaviate.Config{
+        Host:   "some-endpoint.semi.network/",
+        Scheme: "https",
+    }
+
+    client := weaviate.New(cfg)
+
+    data, err := client.Data().ObjectsGetter().
+        Do(context.Background())
+
+    if err != nil {
+        panic(err)
+    }
+    fmt.Printf("%v", data)
+
+}
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+package technology.semi.weaviate;
+
+import java.util.List;
+import technology.semi.weaviate.client.Config;
+import technology.semi.weaviate.client.WeaviateClient;
+import technology.semi.weaviate.client.base.Result;
+import technology.semi.weaviate.client.v1.data.model.WeaviateObject;
+
+public class App {
+  public static void main(String[] args) {
+    Config config = new Config("https", "some-endpoint.semi.network/");
+
+    WeaviateClient client = new WeaviateClient(config);
+
+    Result<List<WeaviateObject>> result = client.data().objectsGetter()
+      .run();
+
+    if (result.hasErrors()) {
+      System.out.println(result.getError());
+      return;
+    }
+    System.out.println(result.getResult());
+  }
+}
+```
+
+</TabItem>
+<TabItem value="curl" label="curl">
+
+```curl
+curl https://some-endpoint.semi.network/v1/objects
+```
+
+</TabItem>
+</Tabs>
+
+## Other object operations
+All other CRUD object operations are available in the [objects RESTful API documentation](https://weaviate.io/developers/weaviate/current/restful-api-references/objects.html) and the [batch RESTful API documentation](https://weaviate.io/developers/weaviate/current/restful-api-references/batch.html).
+
+## Recapitulation
+Importing into Weaviate needs some planning on your side. In almost all cases, you want to use the [batch endpoint](https://weaviate.io/developers/weaviate/current/restful-api-references/batch.html) to create data objects. More often than not, the bottleneck sits in the import script and not in Weaviate. Try to optimize for maxing out all CPUs to get the fastest import speeds.
