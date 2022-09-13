@@ -1819,3 +1819,14 @@ Note this part (this is just a chunk of the response):
  You can set cross-references in all directions and later (as we will see while querying) filter on them. Please, be aware that Weaviate is not a graph database (remember?). This means that dealing with -for example- many-to-many relationships or things like shortest path algorithms is not in our wheelhouse.
 
 :::
+
+## Other schema operations
+
+All schema operations are available in the [API documentation for the schema endpoint](https://weaviate.io/developers/weaviate/current/restful-api-references/schema.html). The documentation also includes examples in different client languages.
+
+## Recapitulation
+
+* Weaviate has a schema where you will define how your data objects will be indexed.
+* Weaviate’s schema is class property based.
+* The schema is highly configurable but comes with pre-defined settings.
+* There is an auto schema function, but for optimal usage, it’s better to manually create a schema
