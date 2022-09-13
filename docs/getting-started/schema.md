@@ -1829,4 +1829,10 @@ All schema operations are available in the [API documentation for the schema end
 * Weaviate has a schema where you will define how your data objects will be indexed.
 * Weaviate’s schema is class property based.
 * The schema is highly configurable but comes with pre-defined settings.
-* There is an auto schema function, but for optimal usage, it’s better to manually create a schema
+* There is an auto schema function, but for optimal usage, it’s better to manually create a schema.
+
+## What would you like to learn next?
+
+* [Learn how to import data](./import)
+* [Learn how to query data based on a schema](./query)
+* [Take me one step back to the basics](https://weaviate.io/developers/weaviate/current/core-knowledge/basics.html)

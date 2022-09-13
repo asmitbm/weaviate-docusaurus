@@ -124,5 +124,5 @@ Next, learn about the [Weaviate Schema](./schema).
 
 Alternatively, you can:
 
-* [Skip to Querying in Weaviate]
+* [Skip to Querying in Weaviate](./query)
 * [Go back to the basics](https://weaviate.io/developers/weaviate/current/core-knowledge/basics.html)
