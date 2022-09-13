@@ -1784,3 +1784,38 @@ This results in:
 }
 ```
 Note this part (this is just a chunk of the response):
+
+```jsx
+{
+    "classes": [
+        {
+            "class": "Author",
+            "properties": [
+                {
+                    "dataType": [
+                        "Publication"
+                    ],
+                    "name": "writesFor"
+                }
+            ]
+        },
+        {
+            "class": "Publication",
+            "properties": [
+                {
+                    "dataType": [
+                        "Author"
+                    ],
+                    "name": "has"
+                }
+            ]
+        }
+    ]
+}
+```
+
+:::info
+
+ You can set cross-references in all directions and later (as we will see while querying) filter on them. Please, be aware that Weaviate is not a graph database (remember?). This means that dealing with -for example- many-to-many relationships or things like shortest path algorithms is not in our wheelhouse.
+
+:::
