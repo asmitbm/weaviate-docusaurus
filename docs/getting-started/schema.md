@@ -1446,4 +1446,341 @@ Note this part (this is just a chunk of the response):
 
 ```
 
-We can also set it the other way around, a Publication, has, Authors. To achieve this, we want to update the Publication class to contain the has cross-reference to Author.
+We can also set it the other way around, a `Publication`, `has`, `Authors`. To achieve this, we want to update the `Publication` class to contain the `has` cross-reference to `Author`.
+
+<Tabs groupId="languages">
+<TabItem value="py" label="Python">
+
+```py
+import weaviate
+import json
+
+client = weaviate.Client("https://some-endpoint.semi.network/")
+
+add_prop = {
+  "dataType": [
+      "Author" # <== note how the name of the class is the cross reference
+  ],
+  "name": "has"
+}
+
+# Add the property
+client.schema.property.create("Publication", add_prop)
+
+# get the schema
+schema = client.schema.get()
+
+# print the schema
+print(json.dumps(schema, indent=4))
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+const weaviate = require("weaviate-client");
+
+const client = weaviate.client({
+    scheme: 'https',
+    host: 'some-endpoint.semi.network/',
+  }); 
+
+const className = 'Publication';
+const prop = {
+  dataType: ['Author'], // <== note how the name of the class is the cross reference
+  name: 'has',
+};
+
+client.schema
+      .propertyCreator()
+      .withClassName(className)
+      .withProperty(prop)
+      .do()
+      .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.error(err)
+  });
+
+// get and print the schema
+  client
+    .schema
+    .getter()
+    .do()
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      console.error(err)
+    });
+```
+
+</TabItem>
+<TabItem value="go" label="Go">
+
+```go
+package main
+
+import (
+  "context"
+  "fmt"
+
+  "github.com/semi-technologies/weaviate-go-client/v4/weaviate"
+  "github.com/semi-technologies/weaviate/entities/models"
+)
+
+func main() {
+    cfg := weaviate.Config{
+        Host:   "some-endpoint.semi.network/",
+        Scheme: "https",
+    }
+
+    client := weaviate.New(cfg)
+
+    prop := &models.Property{
+        DataType: []string{"Author"}, // <== note how the name of the class is the cross reference
+        Name:     "has",
+    }
+
+    err := client.Schema().PropertyCreator().
+        WithClassName("Publication").
+        WithProperty(prop).
+        Do(context.Background())
+
+    if err != nil {
+        panic(err)
+    }
+
+    // get the schema
+    schema, err := client.Schema().Getter().Do(context.Background())
+    if err != nil {
+        panic(err)
+    }
+
+    // print the schema
+    fmt.Printf("%v", schema)
+}
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+package technology.semi.weaviate;
+
+import java.util.Arrays;
+import technology.semi.weaviate.client.Config;
+import technology.semi.weaviate.client.WeaviateClient;
+import technology.semi.weaviate.client.base.Result;
+import technology.semi.weaviate.client.v1.schema.model.DataType;
+import technology.semi.weaviate.client.v1.schema.model.Property;
+
+public class App {
+  public static void main(String[] args) {
+    Config config = new Config("https", "some-endpoint.semi.network/");
+    
+    WeaviateClient client = new WeaviateClient(config);
+
+    Property property = Property.builder()
+      .dataType(Arrays.asList("Author")) // <== note how the name of the class is the cross reference
+      .name("has")
+      .build();
+
+    Result<Boolean> result = client.schema().propertyCreator()
+      .withClassName("Publication")
+      .withProperty(property)
+      .run();
+
+    if (result.hasErrors()) {
+      System.out.println(result.getError());
+      return;
+    }
+    System.out.println(result.getResult());
+
+    // get the schema
+    Result<Schema> result = client.schema().getter().run();
+    if (result.hasErrors()) {
+        System.out.println(result.getError());
+        return;
+    }
+
+    // print the schema
+    System.out.println(result.getResult());
+  }
+}
+```
+
+</TabItem>
+<TabItem value="curl" label="curl">
+
+```curl
+curl \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{ 
+      "dataType": [
+        "Author"
+      ],
+      "name": "has"
+    }' \
+    https://some-endpoint.semi.network/v1/schema/Publication/properties
+
+curl https://some-endpoint.semi.network/v1/schema
+```
+
+</TabItem>
+</Tabs>
+
+This results in:
+
+```jsx
+{
+    "classes": [
+        {
+            "class": "Author",
+            "description": "A description of this class, in this case, it's about authors",
+            "invertedIndexConfig": {
+                "bm25": {
+                    "b": 0.75,
+                    "k1": 1.2
+                },
+                "cleanupIntervalSeconds": 60,
+                "stopwords": {
+                    "additions": null,
+                    "preset": "en",
+                    "removals": null
+                }
+            },
+            "properties": [
+                {
+                    "dataType": [
+                        "string"
+                    ],
+                    "description": "The name of the Author",
+                    "name": "name",
+                    "tokenization": "word"
+                },
+                {
+                    "dataType": [
+                        "int"
+                    ],
+                    "description": "The age of the Author",
+                    "name": "age"
+                },
+                {
+                    "dataType": [
+                        "date"
+                    ],
+                    "description": "The date of birth of the Author",
+                    "name": "born"
+                },
+                {
+                    "dataType": [
+                        "boolean"
+                    ],
+                    "description": "A boolean value if the Author won a nobel prize",
+                    "name": "wonNobelPrize"
+                },
+                {
+                    "dataType": [
+                        "text"
+                    ],
+                    "description": "A description of the author",
+                    "name": "description",
+                    "tokenization": "word"
+                },
+                {
+                    "dataType": [
+                        "Publication"
+                    ],
+                    "name": "writesFor"
+                }
+            ],
+            "shardingConfig": {
+                "virtualPerPhysical": 128,
+                "desiredCount": 1,
+                "actualCount": 1,
+                "desiredVirtualCount": 128,
+                "actualVirtualCount": 128,
+                "key": "_id",
+                "strategy": "hash",
+                "function": "murmur3"
+            },
+            "vectorIndexConfig": {
+                "skip": false,
+                "cleanupIntervalSeconds": 300,
+                "maxConnections": 64,
+                "efConstruction": 128,
+                "ef": -1,
+                "dynamicEfMin": 100,
+                "dynamicEfMax": 500,
+                "dynamicEfFactor": 8,
+                "vectorCacheMaxObjects": 2000000,
+                "flatSearchCutoff": 40000,
+                "distance": "cosine"
+            },
+            "vectorIndexType": "hnsw",
+            "vectorizer": "none"
+        },
+        {
+            "class": "Publication",
+            "description": "A description of this class, in this case, it's about authors",
+            "invertedIndexConfig": {
+                "bm25": {
+                    "b": 0.75,
+                    "k1": 1.2
+                },
+                "cleanupIntervalSeconds": 60,
+                "stopwords": {
+                    "additions": null,
+                    "preset": "en",
+                    "removals": null
+                }
+            },
+            "properties": [
+                {
+                    "dataType": [
+                        "string"
+                    ],
+                    "description": "The name of the Publication",
+                    "name": "name",
+                    "tokenization": "word"
+                },
+                {
+                    "dataType": [
+                        "Author"
+                    ],
+                    "name": "has"
+                }
+            ],
+            "shardingConfig": {
+                "virtualPerPhysical": 128,
+                "desiredCount": 1,
+                "actualCount": 1,
+                "desiredVirtualCount": 128,
+                "actualVirtualCount": 128,
+                "key": "_id",
+                "strategy": "hash",
+                "function": "murmur3"
+            },
+            "vectorIndexConfig": {
+                "skip": false,
+                "cleanupIntervalSeconds": 300,
+                "maxConnections": 64,
+                "efConstruction": 128,
+                "ef": -1,
+                "dynamicEfMin": 100,
+                "dynamicEfMax": 500,
+                "dynamicEfFactor": 8,
+                "vectorCacheMaxObjects": 2000000,
+                "flatSearchCutoff": 40000,
+                "distance": "cosine"
+            },
+            "vectorIndexType": "hnsw",
+            "vectorizer": "none"
+        }
+    ]
+}
+```
+Note this part (this is just a chunk of the response):
