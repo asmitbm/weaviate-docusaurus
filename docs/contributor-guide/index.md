@@ -24,7 +24,7 @@ sidebar_position: 0
 
 If you’re using Weaviate or if you like the project, please <a href="https://github.com/semi-technologies/weaviate">⭐</a> this repository to show your support!
 
-[Weaviate](https://weaviate.io/) is a cloud-native, modular, real-time vector search engine.
+[Weaviate](/docs/) is a cloud-native, modular, real-time vector search engine.
 
 ## Contributing to Weaviate
 
@@ -38,7 +38,7 @@ Please change your Slack workspace display name to your name so that you can con
 
 Here are some resources that will help you familiarize with Weaviate and it's applications:
 
-* [Weaviate Blogs](/blog.html) – a series of blog around Weaviate and the overall vector search space.
+* [Weaviate Blogs](/blog/) – a series of blog around Weaviate and the overall vector search space.
 * [Weaviate Newsletter](http://weaviate-newsletter.semi.technology/) – bi-weekly newsletter with updates on the latest and greatest announcements.
 * [Awesome Weaviate](https://github.com/semi-technologies/awesome-weaviate) – a list of curated examples and tutorials of how to use the Weaviate.
 * [Weaviate Examples](https://github.com/semi-technologies/weaviate-examples) – a repository of various examples projects created by the community. Each example shows a different Weaviate use case. You can add your own examples too!

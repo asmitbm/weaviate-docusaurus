@@ -16,6 +16,6 @@ title: Contextionary Overview
 #   - /documentation/contributor-guide/current/contextionary/
 ---
 
-The Contextionary is the pretrained language model that can come with Weaviate. It gives context and semantics to the language use in the dataset. You can read more about what the Contextionary (c11y) is [here](../../../weaviate/current/modules/text2vec-contextionary.html).
+The Contextionary is the pretrained language model that can come with Weaviate. It gives context and semantics to the language use in the dataset. You can read more about what the Contextionary (c11y) is [here](https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-contextionary.html).
 
-The Contextionary can be found on [Github](https://github.com/semi-technologies/contextionary), but note that this is not intended for stand-alone use. Find benchmarks of this trained language model on the [Classification benchmarks](./classification-benchmarks.html) page.
+The Contextionary can be found on [Github](https://github.com/semi-technologies/contextionary), but note that this is not intended for stand-alone use. Find benchmarks of this trained language model on the [Classification benchmarks](./classification-benchmarks) page.

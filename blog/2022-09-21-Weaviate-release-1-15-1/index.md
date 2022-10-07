@@ -19,11 +19,7 @@ tags: [release, Weaviate]
 
 We usually wouldn’t write a whole blog post about a patch release. But when I chatted with Sebastian (the regular author of our “big” release blog posts series), about the contents of Weaviate `v1.15.1` patch, we quickly realized that this release is too important to end up as a [side note](https://github.com/semi-technologies/weaviate/releases/tag/v1.15.1) somewhere.
 
-<>
-    <iframe src="https://stackblitz.com/edit/angular-ivy-otny88?embed=1&file=src/app/app.component.html&hideExplorer=1&hideNavigation=1&hideDevTools=1&view=preview" width="100%" height="500px"></iframe>
-</>
-
-So, instead, I have the pleasure of introducing you to the latest patch release. Two weeks after the [v1.15.0 release, which introduced backups and more](/blog/2022/09/Weaviate-release-1-15.html), we fixed over **15** bugs.
+So, instead, I have the pleasure of introducing you to the latest patch release. Two weeks after the [v1.15.0 release, which introduced backups and more](https://weaviate.io/blog/2022/09/Weaviate-release-1-15.html), we fixed over **15** bugs.
 
 In summary, this release addresses fixes and improvements around:
 
@@ -71,4 +67,4 @@ Even just two weeks after the `v1.15.0` release, this new `v1.15.1` release is f
 ## Enjoy
 We hope you find enjoy the `v1.15.1` patch release – with bug fixes and UX improvements, making this the best Weaviate release yet!🔥
 
-Please share your feedback with us via [Slack](https://join.slack.com/t/weaviate/shared_invite/zt-goaoifjr-o8FuVz9b1HLzhlUfyfddhw), [Twitter](https://twitter.com/SeMI_tech), or [Github](https://github.com/semi-technologies/weaviate).
+Please share your feedback with us via [Slack](https://join.slack.com/t/weaviate/shared_invite/zt-goaoifjr-o8FuVz9b1HLzhlUfyfddhw), [Twitter](https://twitter.com/weaviate_io), or [Github](https://github.com/semi-technologies/weaviate).

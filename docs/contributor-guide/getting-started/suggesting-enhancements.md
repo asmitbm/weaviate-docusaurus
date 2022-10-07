@@ -190,4 +190,4 @@ We recommend that you read through these guides, which will provide you with a c
 
 * [Code structure and style](https://weaviate.io/developers/contributor-guide/current/weaviate-core/structure.html)
 * [CI/CD Philosophy](https://weaviate.io/developers/contributor-guide/current/weaviate-core/cicd.html)
-* [Test philosophy of Weaviate](https://weaviate.io/developers/contributor-guide/current/weaviate-core/tests.html)
+* [Test philosophy of Weaviate](https://weaviate.io/developers/contributor-guide/current/weaviate-core/tests)

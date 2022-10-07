@@ -42,7 +42,7 @@ Starting from Weaviate `v1.15`, Weaviate includes a Hugging Face module, which p
 The Hugging Face module, allows you to use the [Hugging Face Inference service](https://huggingface.co/inference-api#pricing) with sentence similarity models, to vectorize and query your data, straight from Weaviate. No need to run the Inference API yourself.
 
 > You can choose between `text2vec-huggingface` (Hugging Face) and `text2vec-openai` (OpenAI) modules to delegate your model inference tasks.<br/>
-> Both modules are enabled by default in the [Weaviate Cloud Service](/pricing.html).
+> Both modules are enabled by default in the [Weaviate Cloud Service](https://weaviate.io/pricing.html).
 
 ## Overview
 ![Overview](./img/hugging-face-module-overview.png)
@@ -67,7 +67,7 @@ Weaviate manages the whole process for you. From the perspective of writing your
 For example, when you import data into Weaviate, Weaviate will automatically extract the relevant text fields, send them Hugging Face to vectorize, and store the data with the new vectors in the database.
 
 ### Ready to use with a minimum of fuss
-Every new Weaviate instance created with the [Weaviate Cloud Service](/pricing.html) has the Hugging Face module enabled out of the box. You don't need to update any configs or anything, it is there ready and waiting.
+Every new Weaviate instance created with the [Weaviate Cloud Service](https://weaviate.io/pricing.html) has the Hugging Face module enabled out of the box. You don't need to update any configs or anything, it is there ready and waiting.
 
 On the other hand, to use the Hugging Face module in Weaviate open source (`v1.15` or newer), you only need to set `text2vec-huggingface` as the default vectorizer. Like this:
 
@@ -78,7 +78,7 @@ ENABLE_MODULES: text2vec-huggingface
 
 ## How to get started
 *Note, this article is not meant as a hands-on tutorial.
-For more detailed instructions please check the [documentation]https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html).*
+For more detailed instructions please check the [documentation](https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html).*
 
 The overall process to use a Hugging Face module with Weaviate is fairly straightforward.
 
@@ -157,19 +157,19 @@ result = (
 ```
 
 ## Summary
-> Now you can use [Hugging Face]https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html) or [OpenAI]https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-openai.html) modules in Weaviate to delegate model inference out.
+> Now you can use [Hugging Face](https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html) or [OpenAI](https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-openai.html) modules in Weaviate to delegate model inference out.
 
 Just pick the model, provide your API key and start working with your data.
 
 Weaviate optimizes the communication process with the Inference API for you, so that you can focus on the challenges and requirements of your applications. No need to run the Inference API yourself.
 
 ## What next
-Check out the [text2vec-huggingface]https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html) documentation to learn more about the new module.
+Check out the [text2vec-huggingface](https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html) documentation to learn more about the new module.
 
-If you are new to Weaviate, check out the [getting started guide]https://weaviate.io/developers/weaviate/current/getting-started/index.html).
+If you are new to Weaviate, check out the [getting started guide](/docs/getting-started/installation).
 
 Let us know if you found this article interesting or useful. We are always happy to receive constructive feedback. 😀
 
 We are always working on new articles and are looking for new topics. Let us know if there is anything that you would like us to write about. 🤗
 
-Please reach out to us via [Slack](https://join.slack.com/t/weaviate/shared_invite/zt-goaoifjr-o8FuVz9b1HLzhlUfyfddhw), [Twitter](https://twitter.com/SeMI_tech), or [Github](https://github.com/semi-technologies/weaviate).
+Please reach out to us via [Slack](https://join.slack.com/t/weaviate/shared_invite/zt-goaoifjr-o8FuVz9b1HLzhlUfyfddhw), [Twitter](https://twitter.com/weaviate_io), or [Github](https://github.com/semi-technologies/weaviate).
