@@ -1,17 +1,21 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+connor:
+  name: Connor Shorten
+  title: Developer Advocate / Researcher 
+  url: https://github.com/CShorten
+  image_url: /img/people/icon/connor.jpg
+erika:
+  name: Erika Cardenas
+  title: Developer Advocate
+  url: https://github.com/erika-cardenas
+  image_url: /img/people/icon/erika.jpg
+etienne:
+  name: Etienne Dilocker
+  title: CTO
+  url: https://github.com/etiennedi
+  image_url: /img/people/icon/etienne.jpg
+sebastian:
+  name: Sebastian Witalec
+  title: Head of DevRel
+  url: https://github.com/sebawita
+  image_url: /img/people/icon/sebastian.jpg
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
