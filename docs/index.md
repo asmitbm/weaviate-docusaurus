@@ -1,8 +1,6 @@
 ---
-id: intro
-sidebar_position: 1
-sidebar_label: Weaviate
 title: Weaviate
+sidebar_position: 1
 ---
 
 # Weaviate

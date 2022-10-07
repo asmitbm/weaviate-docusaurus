@@ -1,8 +1,6 @@
 ---
-id: installation
+title: Installation
 sidebar_position: 1
-sidebar_label: Installation
-title: Install Weaviate
 ---
 
 <badges></badges>

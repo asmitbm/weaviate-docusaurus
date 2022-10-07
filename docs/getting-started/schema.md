@@ -1,8 +1,6 @@
 ---
-id: schema
-sidebar_position: 2
-sidebar_label: Schema
 title: Schema
+sidebar_position: 2
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

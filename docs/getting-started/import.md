@@ -1,8 +1,6 @@
 ---
-id: import
-sidebar_position: 3
-sidebar_label: Import
 title: Import
+sidebar_position: 3
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

@@ -1,8 +1,6 @@
 ---
-id: modules
-sidebar_position: 5
-sidebar_label: Modules
 title: Modules
+sidebar_position: 5
 ---
 
 <badges></badges>
