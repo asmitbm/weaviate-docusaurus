@@ -1,8 +1,4 @@
 {
   "label": "Weaviate Core",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "Welcome to the Weaviate Core guide."
-  }
+  "position": 3
 }
