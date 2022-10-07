@@ -17,7 +17,7 @@ tags: [Hugging Face]
 
 ![How to choose a Sentence Transformer from Hugging Face](./img/hero.png)
 
-[Weaviate](/developers/weaviate/current/) has recently unveiled a new module which allows users to easily [integrate models from Hugging Face](/blog/2022/09/Hugging-Face-Inference-API-in-Weaviate.html) to vectorize their data and incoming queries. [Over 700 models](https://huggingface.co/models?pipeline_tag=sentence-similarity&sort=downloads) (at the time of writing this) that can be easily plugged into Weaviate. 
+[Weaviate]https://weaviate.io/developers/weaviate/current/) has recently unveiled a new module which allows users to easily [integrate models from Hugging Face](/blog/2022/09/Hugging-Face-Inference-API-in-Weaviate.html) to vectorize their data and incoming queries. [Over 700 models](https://huggingface.co/models?pipeline_tag=sentence-similarity&sort=downloads) (at the time of writing this) that can be easily plugged into Weaviate. 
 
 You may ask: **Why are there so many models and how do they differ?**<br/>
 And more importantly: **How to choose a Sentence Transformer for Semantic Search?**
@@ -135,7 +135,7 @@ Deep Learning research has mainly been focused on Text, Image, and Image-Text mo
 To recap, the HuggingFace Sentence Transformer checkpoints mostly differ in the **data** they were trained on. Picking the model that best aligns with your use case is a matter of identifying the most similar Domain and Task, while mostly welcoming additional scale in the dataset size. Most applications of the Weaviate Vector Search Engine that involve Sentence Transformers are mostly concerned with **Modalities** of Text, Image, or Image-Text space, but the number of these categories seems likely to explode in the near future.
 
 ## What's next
-Check out the [Getting Started with Weaviate](/developers/weaviate/current/getting-started/quick-start.html) and begin building amazing apps with Weaviate.
+Check out the [Getting Started with Weaviate]https://weaviate.io/developers/weaviate/current/getting-started/quick-start.html) and begin building amazing apps with Weaviate.
 
 You can reach out to us on [Slack](https://join.slack.com/t/weaviate/shared_invite/zt-goaoifjr-o8FuVz9b1HLzhlUfyfddhw) or [Twitter](https://twitter.com/SeMI_tech).
 

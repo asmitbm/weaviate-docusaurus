@@ -78,7 +78,7 @@ ENABLE_MODULES: text2vec-huggingface
 
 ## How to get started
 *Note, this article is not meant as a hands-on tutorial.
-For more detailed instructions please check the [documentation](/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html).*
+For more detailed instructions please check the [documentation]https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html).*
 
 The overall process to use a Hugging Face module with Weaviate is fairly straightforward.
 
@@ -157,16 +157,16 @@ result = (
 ```
 
 ## Summary
-> Now you can use [Hugging Face](/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html) or [OpenAI](/developers/weaviate/current/retriever-vectorizer-modules/text2vec-openai.html) modules in Weaviate to delegate model inference out.
+> Now you can use [Hugging Face]https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html) or [OpenAI]https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-openai.html) modules in Weaviate to delegate model inference out.
 
 Just pick the model, provide your API key and start working with your data.
 
 Weaviate optimizes the communication process with the Inference API for you, so that you can focus on the challenges and requirements of your applications. No need to run the Inference API yourself.
 
 ## What next
-Check out the [text2vec-huggingface](/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html) documentation to learn more about the new module.
+Check out the [text2vec-huggingface]https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html) documentation to learn more about the new module.
 
-If you are new to Weaviate, check out the [getting started guide](/developers/weaviate/current/getting-started/index.html).
+If you are new to Weaviate, check out the [getting started guide]https://weaviate.io/developers/weaviate/current/getting-started/index.html).
 
 Let us know if you found this article interesting or useful. We are always happy to receive constructive feedback. 😀
 
