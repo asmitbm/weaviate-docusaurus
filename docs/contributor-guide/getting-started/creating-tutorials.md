@@ -1,8 +1,6 @@
 ---
-id: creating-tutorials
-sidebar_position: 6
-sidebar_label: Creating Tutorials
 title: Creating Tutorials
+sidebar_position: 6
 ---
 
 <badges></badges>

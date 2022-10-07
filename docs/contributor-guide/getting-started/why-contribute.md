@@ -1,8 +1,6 @@
 ---
-id: why-contribute
-sidebar_position: 1
-sidebar_label: Why Contribute
 title: Why Contribute
+sidebar_position: 1
 ---
 
 <badges></badges>

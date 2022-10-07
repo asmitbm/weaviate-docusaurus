@@ -1,8 +1,6 @@
 ---
-id: reporting-bugs
-sidebar_position: 3
-sidebar_label: Reporting Bugs
 title: Reporting Bugs
+sidebar_position: 3
 ---
 
 <badges></badges>

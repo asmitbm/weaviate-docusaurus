@@ -1,8 +1,7 @@
 ---
-id: git-and-github
+title: Contributing to Weaviate using git and GitHub Guide
 sidebar_position: 7
 sidebar_label: Git and GitHub Guide
-title: Contributing to Weaviate using git and GitHub Guide
 ---
 
 <badges></badges>
@@ -44,15 +43,15 @@ Now that you understand how git and GitHub work, let's get started on contributi
 
 You can also create an issue first and then work on it. Once you've decided which repository to work on, go to its issue tab and click "New issue."
 
-![new issue](./img/new_issue.png)
+![new issue](/img/contributor-guide/getting-started/new_issue.png)
 
 There are several templates available, such as documentation feedback, bug reporting, and so on. If you want to create your own custom issue, go to the bottom left of the issue list box and click "Open a blank issue."
 
-![issue templates](./img/issue_templates.png)
+![issue templates](/img/contributor-guide/getting-started/issue_templates.png)
 
 ### Example Issue: Create a new issue
 
-![create a new issue](./img/new_issue_temp.png)
+![create a new issue](/img/contributor-guide/getting-started/new_issue_temp.png)
 
 Fill out all of the information correctly. To learn more about what each field means, carefully read the description under each header.
 
@@ -60,11 +59,11 @@ Fill out all of the information correctly. To learn more about what each field m
 
 * Simply click the `Fork` button on the GitHub website. That's how easy it is. This will create a copy of the repository in your account.
 
-![fork repo](./img/fork.png)
+![fork repo](/img/contributor-guide/getting-started/fork.png)
 
 * Once you have done that, head over to your account, select the forked repository, and clone your repo to your local machine
 
-![clone repo](./img/clone.png)
+![clone repo](/img/contributor-guide/getting-started/clone.png)
 
 ```
 git clone git@github.com:<USERNAME>/weaviate.git
@@ -268,13 +267,13 @@ It will almost certainly ask for your GitHub login credentials. Enter them, and 
 
 When all of your changes have been committed and pushed to GitHub, visit the page for your fork there, choose the development branch, and then press the `Compare & pull request` button. 
 
-![create pull request](./img/pull_request.png)
+![create pull request](/img/contributor-guide/getting-started/pull_request.png)
 
 If you need to make any further commits to your pull request, simply check out your development branch and push the updates to GitHub. Your pull request will automatically keep track of and update the commits made to your development branch.
 
 * Complete the pull request by filling out our [pull request template](https://github.com/semi-technologies/weaviate/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
 
-![pull request template](./img/pull_request_temp.png)
+![pull request template](/img/contributor-guide/getting-started/pull_request_temp.png)
 
 * Once your changes are ready, make sure you [self review](#self-reviewing-pull-requests) your pull request to speed up the review process.
 

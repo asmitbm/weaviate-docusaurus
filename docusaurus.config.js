@@ -64,10 +64,19 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
             label: 'Docs',
+            sidebarId: 'docsSidebar',
+            type: 'doc',
+            docId: 'index',
+            position: 'left',
+          },
+          {
+            label: 'Contributor Guide',
+            sidebarId: 'contributorSidebar',
+            type: 'doc',
+            docId: 'contributor-guide/index',
+            // docId: 'contributor-guide/intro',
+            position: 'left',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {

@@ -1,8 +1,6 @@
 ---
-id: improving-docs
-sidebar_position: 4
-sidebar_label: Improving Documentation
 title: Improving Documentation
+sidebar_position: 4
 ---
 
 <badges></badges>

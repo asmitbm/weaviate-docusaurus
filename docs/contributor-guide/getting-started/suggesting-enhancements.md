@@ -1,8 +1,6 @@
 ---
-id: suggesting-enhancements
-sidebar_position: 2
-sidebar_label: Suggesting Enhancements
 title: Suggesting Enhancements
+sidebar_position: 2
 ---
 
 <badges></badges>
