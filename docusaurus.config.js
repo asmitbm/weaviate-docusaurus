@@ -10,7 +10,7 @@ const config = {
   tagline: 'Vector Search Engine',
   url: 'https://weaviate-docusaurus.netlify.app',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/weaviate-logo.svg',
   
@@ -93,8 +93,8 @@ const config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Weaviate',
+              to: '/docs/',
             },
           ],
         },
