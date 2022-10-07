@@ -13,6 +13,11 @@ etienne:
   title: CTO
   url: https://github.com/etiennedi
   image_url: /img/people/icon/etienne.jpg
+laura:
+  name: Laura Ham
+  title: Developer Advocate / Researcher
+  url: https://github.com/laura-ham
+  image_url: /img/people/icon/laura.jpg
 sebastian:
   name: Sebastian Witalec
   title: Head of DevRel

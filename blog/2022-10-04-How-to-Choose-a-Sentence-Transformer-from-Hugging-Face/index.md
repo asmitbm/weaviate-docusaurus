@@ -4,6 +4,7 @@ slug: How-to-Choose-a-Sentence-Transformer-from-Hugging-Face
 authors: [connor] 
 date: 2022-10-04
 tags: [Hugging Face]
+image: ./img/hero.png
 
 # layout: post
 # description: "Learn about the various Sentence Transformers from Hugging Face!"
@@ -28,7 +29,6 @@ And more importantly: **How to choose a Sentence Transformer for Semantic Search
 There are too many models to summarize in one flowchart. So instead, we will describe factors on how to differentiate these models and give you tools to **choose the perfect model for your use case**.
 
 <Image img={require('./img/huggingface-sentence-transformers.png')} style={{width: "70%"}}/>
-
 
 ## Differences in Deep Learning models
 

@@ -4,6 +4,7 @@ slug: Hugging-Face-Inference-API-in-Weaviate
 authors: [sebastian]
 date: 2022-09-27
 tags: [Weaviate, Hugging Face]
+image: ./img/hero.png
 
 # layout: post
 # description: "Running ML Model Inference in production is hard. You can use Weaviate – a vector search engine – with Hugging Face Inference module to delegate the heavy lifting."

@@ -49,7 +49,7 @@ The best thing is, vector search engines can **query large datasets**, containin
 
 Without getting too much into details, one of the big reasons why Vector Search engines are so fast is because they use the **Approximate Nearest Neighbor** (ANN) algorithm to index data based on vectors. ANN algorithms organize indexes so that the vectors that are closely related are stored next to each other. 
 
-Check out this article to learn [Why Vector Search engines are so fast](https://weaviate.io/blog/2022/09/Why-is-Vector-Search-so-fast.html) and how they work.
+Check out this article to learn [Why Vector Search engines are so fast](/blog/Why-is-Vector-Search-so-fast) and how they work.
 
 ### Why are there different distance metrics?
 Depending on the Machine Learning model used, vectors can have ~100 dimensions or go into thousands of dimensions.
