@@ -26,21 +26,21 @@ We are happy to announce the release of Weaviate 1.15, which is packed with grea
 ## The brief
 
 If you like your content brief and to the point, here is the TL;DR of this release:
-0. [☁️Cloud-native backups](#cloud-native-backups) – allows you to configure your environment to create backups – of selected classes or the whole database – straight into AWS S3, GCS or local filesystem
-0. [Reduced memory usage](#reduced-memory-usage) - we found new ways to optimize memory usage, reducing RAM usage by 10-30%.
-0. [Better control over Garbage Collector](#better-control-over-garbage-collector) – with the introduction of GOMEMLIMIT we gained more control over the garbage collector, which significantly reduced the chances of OOM kills for your Weaviate setups. 
-0. [Faster imports for ordered data](#faster-imports-for-ordered-data) – by extending the Binary Search Tree structure with a self-balancing Red-black tree, we were able to speed up imports from O(n) to O(log n)
-0. [More efficient filtered aggregations](#more-efficient-filtered-aggregations) – thanks to optimization to a library reading binary data, filtered aggregations are now 10-20 faster and require a lot less memory.
-<!-- (TODO: add the claim by Juraj) -->
-0. [Two new distance metrics](#new-distance-metrics) – with the addition of Hamming and Manhattan distance metrics, you can choose the metric (or a combination of) to best suit your data and use case.
-0. [Two new Weaviate modules](#new-weaviate-modules) – with the Summarization module, you can summarize any text on the fly, while with the HuggingFace module, you can use compatible transformers from the HuggingFace
-0. [Other improvements and bug fixes](#other-improvements-and-bug-fixes) – it goes without saying that with every Weaviate release, we strive to make Weaviate more stable – through bug fixes – and more efficient – through many optimizations.
+1. [☁️Cloud-native backups](#cloud-native-backups) – allows you to configure your environment to create backups – of selected classes or the whole database – straight into AWS S3, GCS or local filesystem
+1. [Reduced memory usage](#reduced-memory-usage) - we found new ways to optimize memory usage, reducing RAM usage by 10-30%.
+1. [Better control over Garbage Collector](#better-control-over-garbage-collector) – with the introduction of GOMEMLIMIT we gained more control over the garbage collector, which significantly reduced the chances of OOM kills for your Weaviate setups. 
+1. [Faster imports for ordered data](#faster-imports-for-ordered-data) – by extending the Binary Search Tree structure with a self-balancing Red-black tree, we were able to speed up imports from O(n) to O(log n)
+1. [More efficient filtered aggregations](#more-efficient-filtered-aggregations) – thanks to optimization to a library reading binary data, filtered aggregations are now 10-20 faster and require a lot less memory.
+1. [Two new distance metrics](#new-distance-metrics) – with the addition of Hamming and Manhattan distance metrics, you can choose the metric (or a combination of) to best suit your data and use case.
+1. [Two new Weaviate modules](#new-weaviate-modules) – with the Summarization module, you can summarize any text on the fly, while with the HuggingFace module, you can use compatible transformers from the HuggingFace
+1. [Other improvements and bug fixes](#other-improvements-and-bug-fixes) – it goes without saying that with every Weaviate release, we strive to make Weaviate more stable – through bug fixes – and more efficient – through many optimizations.
 
 Read below to learn more about each of these points in more detail.
 
-### Patch 1.15.1 note
+:::info Patch 1.15.1
 We have published a patch release v1.15.1.<br/>
-To learn more check the [Weaviate 1.15.1 patch release](/blog/Weaviate-release-1-15-1)blog.
+To learn more check the [**Weaviate 1.15.1 patch release**](/blog/Weaviate-release-1-15-1) blog.
+:::
 
 ### Community effort
 ![New Contributors](./img/new-contributors.jpg)
@@ -83,13 +83,17 @@ Without getting into too many details (see the [docs for more precise instructio
 
 For S3 and GCS, you need your cloud bucket name, authentication details and some extra details like a project name or the cloud region.
 
-> For S3 authentication you can use access keys or IAM with role ARN’s.
->
-> For GCS you can use a Google Application Credentials json file.
+:::tip
+For S3 authentication you can use access keys or IAM with role ARN’s.
+
+For GCS you can use a Google Application Credentials json file.
+:::
 
 Alternatively, you can configure backups with the **local filesystem**. All you need here is to provide the path to the backup folder.
 
-> Note, you can have multiple storage configurations – one for each S3, GCS and the local filesystem.
+:::info
+You can have multiple storage configurations – one for each S3, GCS and the local filesystem.
+:::
 
 ### Creating backups - API
 Once you have the backup module up and running, you can create backups with a single `POST` command:
@@ -207,8 +211,9 @@ To fix that, we switched to static allocations, and Weaviate instructs the Go ru
 
 Weaviate is built from the ground up in Go, which allows for building very performant and memory-safe applications. Go is a garbage-collected language.
 
-> *A quick refresher:*<br/>
-> In a garbage-collected language, such as Go, C#, or Java, the programmer doesn’t have to deallocate objects manually after using them. Instead, a GC cycle runs periodically to collect memory no longer needed and ensure it can be assigned again.
+:::info A quick refresher:
+In a garbage-collected language, such as Go, C#, or Java, the programmer doesn’t have to deallocate objects manually after using them. Instead, a GC cycle runs periodically to collect memory no longer needed and ensure it can be assigned again.
+:::
 
 ### The problem
 
