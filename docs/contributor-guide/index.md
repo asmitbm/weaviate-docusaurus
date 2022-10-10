@@ -24,7 +24,7 @@ sidebar_position: 0
 
 If you’re using Weaviate or if you like the project, please <a href="https://github.com/semi-technologies/weaviate">⭐</a> this repository to show your support!
 
-[Weaviate](/docs/) is a cloud-native, modular, real-time vector search engine.
+[Weaviate](/developers/weaviate/) is a cloud-native, modular, real-time vector search engine.
 
 ## Contributing to Weaviate
 

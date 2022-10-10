@@ -19,7 +19,7 @@ const FeatureList = [
     description: (
       <>
         Starting your development with Weaviate is one <code>docker-compose up</code> away. 
-        Get started in the docs <a href="/docs/">here</a>.
+        Get started in the docs <a href="/developers/weaviate/">here</a>.
       </>
     ),
   },

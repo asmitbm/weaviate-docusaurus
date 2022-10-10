@@ -38,6 +38,9 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
           'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+
+          path: 'docs',                // folder name – where the docs are
+          routeBasePath: 'developers', // route name – where to navigate for docs i.e. weaviate.io/<route-base-path>/...
         },
         blog: {
           showReadingTime: true,
@@ -68,7 +71,7 @@ const config = {
           label: 'Docs',
           sidebarId: 'docsSidebar',
           type: 'doc',
-          docId: 'index',
+          docId: 'weaviate/index',
           position: 'left',
         },
         {
@@ -95,7 +98,7 @@ const config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/',
+              to: '/developers/weaviate/getting-started',
             },
           ],
         },

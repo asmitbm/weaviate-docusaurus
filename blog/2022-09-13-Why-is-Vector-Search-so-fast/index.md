@@ -100,7 +100,7 @@ Which algorithm works best depends on your project. Performance can be measured 
 So, ANN is not some magic method that will always find the true k nearest neighbors in a dataset, it can find a pretty good approximation of the true k neighbors. But it can do this in a fraction of the time! 
 
 ## HNSW in Weaviate
-[Weaviate](/docs/)is a great example of a vector search engine that uses ANN algorithms to offer ultra-fast queries. The first ANN algorithm introduced to Weaviate is a custom implementation of [Hierarchical Navigable Small World graphs (HNSW)](https://weaviate.io/developers/weaviate/current/vector-index-plugins/hnsw.html).
+[Weaviate](/developers/weaviate/)is a great example of a vector search engine that uses ANN algorithms to offer ultra-fast queries. The first ANN algorithm introduced to Weaviate is a custom implementation of [Hierarchical Navigable Small World graphs (HNSW)](https://weaviate.io/developers/weaviate/current/vector-index-plugins/hnsw.html).
 
 <Image img={require('./img/ann-hnsw.png')} style={{width: "50%"}}/>
 
@@ -123,7 +123,7 @@ The Weaviate Core team is currently working on research and implementation for o
 
 Until then, you can:
 * Listen to a [podcast about ANN Benchmarks](https://youtu.be/kG3ji89AFyQ)with Connor and Etienne from SeMI Technologies.
-* Check out the [Getting Started with Weaviate](/docs/getting-started/installation)and begin building amazing apps with Weaviate.
+* Check out the [Getting Started with Weaviate](/developers/weaviate/getting-started)and begin building amazing apps with Weaviate.
 * Join our community on [Slack](https://join.slack.com/t/weaviate/shared_invite/zt-goaoifjr-o8FuVz9b1HLzhlUfyfddhw), where we can all talk about vector search engines.
 * Reach out to us on [Twitter](https://twitter.com/weaviate_io).
 

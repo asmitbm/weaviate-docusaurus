@@ -167,7 +167,7 @@ Weaviate optimizes the communication process with the Inference API for you, so 
 ## What next
 Check out the [text2vec-huggingface](https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-huggingface.html) documentation to learn more about the new module.
 
-If you are new to Weaviate, check out the [getting started guide](/docs/getting-started/installation).
+If you are new to Weaviate, check out the [getting started guide](/developers/weaviate/getting-started).
 
 Let us know if you found this article interesting or useful. We are always happy to receive constructive feedback. 😀
 
