@@ -28,3 +28,4 @@ This command generates static content into the `build` directory and can be serv
 
 
 To-Do: Add Gitpod integration
+https://gitpod.io/#https://github.com/Asmit2952/weaviate-docusaurus
