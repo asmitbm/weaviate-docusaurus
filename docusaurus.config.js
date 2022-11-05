@@ -83,6 +83,7 @@ const config = {
           position: 'left',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/podcast', label: 'Podcast', position: 'left'},
         {
           href: 'https://github.com/semi-technologies/weaviate-io',
           label: 'GitHub',
