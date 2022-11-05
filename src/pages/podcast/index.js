@@ -20,7 +20,7 @@ export default function Podcast() {
   })
   
   return (
-    <Layout title="Podcast" description="Hello React Page">
+    <Layout title="Podcast" description="Weaviate Podcast Page">
       <div className={style.podcast}>
         <div className={style.podcast_page_heading}>
           <h1>Weaviate Podcast</h1>
