@@ -128,6 +128,10 @@ const config = {
               to: '/blog',
             },
             {
+              label: 'Podcast',
+              to: '/podcast',
+            },
+            {
               label: 'GitHub',
               href: 'https://github.com/semi-technologies/weaviate-io',
             },
