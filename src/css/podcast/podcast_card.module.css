@@ -4,7 +4,6 @@
   min-width: 315px;
   max-width: 515px;
   width: 100%;
-  color: #ffffff;
   text-align: left;
   line-height: 1.4em;
   border-radius: 10px;
@@ -53,6 +52,7 @@
   text-align: center;
   font-weight: 600;
   letter-spacing: 1px;
+  color: #38d611;
 }
 
 .podcast_card h2 {
@@ -60,6 +60,7 @@
   font-weight: 500;
   font-size: 1.5em;
   line-height: 1.2em;
+  color: #38d611;
 }
 
 .podcast_card a {
@@ -70,4 +71,5 @@
   margin: 0 0 10px;
   font-size: 1em;
   letter-spacing: 1px;
+  color: #38d611;
 }
