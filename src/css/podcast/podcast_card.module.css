@@ -1,70 +1,73 @@
 .podcast_card {
-    position: relative;
-    overflow-x: hidden;
-    min-width: 315px;
-    max-width: 515px;
-    width: 100%;
-    color: #ffffff;
-    text-align: left;
-    line-height: 1.4em;
-    border-radius: 10px;
-    transition: all ease-in-out 300ms;
-  }
+  position: relative;
+  overflow-x: hidden;
+  min-width: 315px;
+  max-width: 515px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.4em;
+  border-radius: 10px;
+  transition: all ease-in-out 300ms;
+}
 
-  .podcast_card:hover {
-    box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
-    transform: translate(0px, -10px);
-  }
+.podcast_card:hover {
+  box-shadow: 0px 37px 20px -15px rgba(0, 0, 0, 0.2);
+  transform: translate(0px, -10px);
+}
 
-  .podcast_card img {
-    max-width: 100%;
-    vertical-align: top;
-    opacity: 0.85;
-  }
+.podcast_card img {
+  max-width: 100%;
+  vertical-align: top;
+  opacity: 0.85;
+}
 
-  .podcast_card div {
-    width: 100%;
-    background-color: #141414;
-    padding: 0 25px 25px;
-    position: relative;
-  }
-  
-  .podcast_card div:before {
-    position: absolute;
-    content: '';
-    bottom: 100%;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 55px 0 0 400px;
-    border-color: transparent transparent transparent #141414;
-  }
+.podcast_card div {
+  width: 100%;
+  background: var(--theme-card-background);
+  padding: 0 25px 25px;
+  position: relative;
+}
 
-  .podcast_card div a {
-    padding: 5px;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    font-size: 0.7em;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin: 10px 0;
-    display: inline-block;
-    width: 47%;
-    text-align: center;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
+.podcast_card div:before {
+  position: absolute;
+  content: '';
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 55px 0 0 400px;
+  border-color: transparent transparent transparent var(--theme-card-background);
+}
 
-  .podcast_card h2 {
-    margin: 0 0 10px;
-    font-weight: 300;
-    font-size: 1.5em;
-    line-height: 1.2em;
-  }
-  .podcast_card p {
-    margin: 0 0 10px;
-    font-size: 0.8em;
-    letter-spacing: 1px;
-    opacity: 0.8;
-  }
+.podcast_card div p:last-child {
+  padding: 5px;
+  border: 1px solid #ffffff;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 10px 0;
+  display: inline-block;
+  width: 47%;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.podcast_card h2 {
+  margin: 0 0 10px;
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+.podcast_card a {
+  text-decoration: none;
+}
+
+.podcast_card p {
+  margin: 0 0 10px;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
