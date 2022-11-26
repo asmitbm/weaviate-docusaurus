@@ -8,18 +8,18 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Weaviate Docs',
   tagline: 'Vector Search Engine',
-  url: 'https://weaviate-docusaurus.netlify.app',
+  url: 'https://weaviate-docusaurus.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/weaviate-logo.svg',
   
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
+  // TODO: If you aren't using GitHub pages, you don't need these.
   organizationName: 'semi-technologies', // Usually your GitHub org/user name.
-  projectName: 'weaviate', // Usually your repo name.
+  projectName: 'weaviate-io', // Usually your repo name.
   
-  // Even if you don't use internalization, you can use this field to set useful
+  // Even if you don't use internationalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
@@ -37,7 +37,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-          'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          'https://github.com/semi-technologies/weaviate-io/TODO/tree/main/packages/create-docusaurus/templates/shared/',
 
           path: 'docs',                // folder name – where the docs are
           routeBasePath: 'developers', // route name – where to navigate for docs i.e. weaviate.io/<route-base-path>/...
@@ -48,7 +48,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-          'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          'https://github.com/semi-technologies/weaviate-io/TODO/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

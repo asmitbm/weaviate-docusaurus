@@ -1,3 +1,8 @@
+bob:
+  name: Bob van Luijt
+  title: CEO
+  url: https://github.com/bobvanluijt
+  image_url: /img/people/icon/bob.jpg
 connor:
   name: Connor Shorten
   title: Developer Advocate / Researcher 
